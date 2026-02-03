@@ -65,15 +65,18 @@ a {
   text-transform: uppercase;
 }
 
-.brand-mark {
-  font-size: 28px;
-  letter-spacing: 4px;
-  color: var(--red);
+.brand-logo {
+  background: var(--white);
+  border-radius: 999px;
+  padding: 10px 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+  display: inline-flex;
+  align-items: center;
 }
 
-.brand-name {
-  font-size: 20px;
-  letter-spacing: 2px;
+.brand-logo img {
+  height: 26px;
+  display: block;
 }
 
 .nav-links {
@@ -177,6 +180,27 @@ a {
 .hero-art {
   position: relative;
   min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.hero-badge {
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  background: var(--white);
+  padding: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+}
+
+.hero-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .card {
@@ -204,25 +228,20 @@ a {
 }
 
 .stack {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: min(320px, 90%);
+  position: relative;
+  width: min(360px, 90%);
 }
 
 .stack:nth-child(1) {
-  top: 0;
+  top: auto;
 }
 
 .stack.offset {
-  top: 120px;
-  left: 40px;
+  transform: translateX(24px);
 }
 
 .stack.thin {
-  top: 240px;
-  right: 30px;
+  transform: translateX(-12px);
 }
 
 .section {
