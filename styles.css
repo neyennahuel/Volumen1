@@ -17,6 +17,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: transparent;
+  background-color: #000000;
   background-image: url('prueba55.jpg');
   background-size: cover;
   background-position: center;
@@ -522,4 +523,17 @@ a {
 body::before {
   content: "";
   display: none;
+}
+
+
+@media (max-width: 768px) {
+  html, body {
+    background-size: contain;
+    background-position: center top;
+    background-attachment: scroll;
+  }
+
+  body {
+    min-height: 100vh;
+  }
 }
