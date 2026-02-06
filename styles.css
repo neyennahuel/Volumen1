@@ -544,20 +544,21 @@ a {
 
 @media (max-width: 768px) {
   html, body {
-    background-size: contain;
+    background-size: cover;
     background-position: center;
   }
 
   .bg-image img {
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
   }
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
   .bg-image img {
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
   }
+}
 }
 }
