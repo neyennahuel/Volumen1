@@ -18,12 +18,8 @@ html, body {
   padding: 0;
   background: transparent;
   background-color: #000000;
-  background-image: url('prueba55.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: var(--white);
+  background-color: #000000;
+            color: var(--white);
   font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
   scroll-behavior: smooth;
 }
@@ -35,6 +31,21 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.bg-image {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  background-color: #000000;
+  background-image: url('prueba55.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+  pointer-events: none;
 }
 
 .bg-noise {
@@ -515,38 +526,16 @@ a {
   transform: scale(0.98);
 }
 
-
-
-
-
-
-body::before {
-  content: "";
-  display: none;
-}
-
-
 @media (max-width: 768px) {
-  html, body {
-    background-image: none;
-    background-color: #000000;
-  }
-
-  body::before {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background-image: url('prueba55.jpg');
+  .bg-image {
     background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-    z-index: -1;
+    background-position: center;
   }
 }
 }
-}
-
-  body {
-    min-height: 100vh;
+@supports (-webkit-overflow-scrolling: touch) {
+  .bg-image {
+    background-size: contain;
+    background-position: center;
   }
 }
