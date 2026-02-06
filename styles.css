@@ -528,10 +528,12 @@ body::before {
 
 @media (max-width: 768px) {
   html, body {
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: center top;
     background-attachment: scroll;
+    background-color: #000000;
   }
+}
 }
 
   body {
